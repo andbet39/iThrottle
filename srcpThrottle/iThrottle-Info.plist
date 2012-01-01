@@ -9,9 +9,25 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFiles</key>
-	<array/>
+	<array>
+		<string>iThrottle_icon.png</string>
+		<string>iThrottle_icon@2x.png</string>
+	</array>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>iThrottle_icon.png</string>
+				<string>iThrottle_icon@2x.png</string>
+			</array>
+			<key>UIPrerenderedIcon</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>ATdevApps.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.ATDevApps.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -26,6 +42,10 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>EHSMB.TTF</string>
+	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard_iPhone</string>
 	<key>UIMainStoryboardFile~ipad</key>
@@ -37,8 +57,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[LocoListViewController viewDidLoad]:LocoListViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "(__NSCFDictionary *)((((&apos;LocoListViewController&apos; *) (self)))-&gt;lm)-&gt;locomotivesArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
