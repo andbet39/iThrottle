@@ -30,6 +30,10 @@
 }
 
 
+-(void)initLoco:(Locomotiva *) l{
+
+
+}
 -(void)updateLoco :(Locomotiva * ) l{
     
     NSString * msg = [NSString stringWithFormat:@"SET %d GL %d %d %d %d %d %d %d %d %d",1,l.address,l.dir, l.speed,l.max_speed,l.f1,l.f2,l.f3,l.f4,l.f5];

@@ -25,4 +25,5 @@
 -(void)updateLoco:(Locomotiva *) l;
 -(void)getInfoLoco:(Locomotiva *) l;
 -(void)update;
+-(void)initLoco:(Locomotiva *) l;
 @end
