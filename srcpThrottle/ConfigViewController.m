@@ -87,6 +87,7 @@
     sharedProtocol=[ProtocolManager sharedManager];
     sharedProtocol.protocol= (Protocol*)[[SRCPProtocol alloc]initWithServer:[serverText text] port:[PortText.text intValue]];
     
+    [sharedProtocol.protocol Connect];
     
 
 }

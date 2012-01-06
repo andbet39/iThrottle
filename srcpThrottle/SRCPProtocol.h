@@ -10,6 +10,8 @@
 #import "Protocol.h"
 #import "Locomotiva.h"
 
+
+
 @interface SRCPProtocol : Protocol
 {
 
@@ -18,7 +20,7 @@
 
 -(id)initWithServer:(NSString *)host port:(int)port;
 
--(void) Connect;
+-(void)Connect;
 -(void)updateLoco:(Locomotiva *) l;
 -(void)getInfoLoco:(Locomotiva *) l;
 -(void)update;

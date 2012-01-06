@@ -26,17 +26,26 @@
 
 -(void) Connect{
 
+    NSString * msg = [NSString stringWithFormat:@"GO"];
+    [sckmgr sendMessage:msg ];    
+
     
 }
 
 
 -(void)initLoco:(Locomotiva *) l{
 
+    NSString * msg = [NSString stringWithFormat:@"INIT %d GL %d N 1 %d 5",l.bus,l.address,l.max_speed];
+    NSLog(msg);
+    l.isInitiated=true;
+    [sckmgr sendMessage:msg];
 
 }
 -(void)updateLoco :(Locomotiva * ) l{
     
-    NSString * msg = [NSString stringWithFormat:@"SET %d GL %d %d %d %d %d %d %d %d %d",1,l.address,l.dir, l.speed,l.max_speed,l.f1,l.f2,l.f3,l.f4,l.f5];
+    if(!l.isInitiated)[self initLoco:l];
+    
+    NSString * msg = [NSString stringWithFormat:@"SET %d GL %d %d %d %d %d %d %d %d %d",l.bus,l.address,l.dir, l.speed,l.max_speed,l.f1,l.f2,l.f3,l.f4,l.f5];
     NSLog(msg);
     [sckmgr sendMessage:msg];
     
@@ -46,7 +55,9 @@
 
 -(void)getInfoLoco:(Locomotiva * ) l{
 
-    NSString * msg = [NSString stringWithFormat:@"GET %d GL %d",1,l.address];
+    if(!l.isInitiated)[self initLoco:l];
+
+    NSString * msg = [NSString stringWithFormat:@"GET %d GL %d",l.bus,l.address];
     NSLog(msg);
 
     [sckmgr sendMessage:msg ];    
@@ -56,13 +67,14 @@
 
 -(void)update{
 
+    
 
     NSRange range;
     NSMutableArray * toDelete =[[NSMutableArray alloc]init];
 
     for (NSString * mess in [sckmgr.messages reverseObjectEnumerator]) {
         
-        range = [mess rangeOfString :@"200 OK"];
+        range = [mess rangeOfString :@"OK"];
         if (range.location != NSNotFound) {
             [toDelete addObject:mess];
             
@@ -89,11 +101,12 @@
                 [l setSpeed:[[myWords objectAtIndex:7]intValue]];
                 [l setDir:[[myWords objectAtIndex:6]intValue]];
                 [l setMax_speed:[[myWords objectAtIndex:8]intValue]];
-                [l setF1:[[myWords objectAtIndex:9]intValue]];
-                [l setF2:[[myWords objectAtIndex:10]intValue]];
-                [l setF3:[[myWords objectAtIndex:11]intValue]];
-                [l setF4:[[myWords objectAtIndex:12]intValue]];
-                [l setF5:[[myWords objectAtIndex:13]intValue]];
+                
+                if([myWords count]>9)[l setF1:[[myWords objectAtIndex:9]intValue]];
+                if([myWords count]>10)[l setF2:[[myWords objectAtIndex:10]intValue]];
+                if([myWords count]>11)[l setF3:[[myWords objectAtIndex:11]intValue]];
+                if([myWords count]>12)[l setF4:[[myWords objectAtIndex:12]intValue]];
+                if([myWords count]>13)[l setF5:[[myWords objectAtIndex:13]intValue]];
                 
                 [lm updateLocobyLoco:l];
                 

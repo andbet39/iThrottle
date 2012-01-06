@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 
-#define SPEED_STEP 1
+#define SPEED_STEP 14
+#define  SRCP_LOCO_BUS 1
 
 typedef enum {
     kForward,
@@ -33,6 +34,9 @@ typedef enum {
     direction dir;
     
     
+    int bus;
+    
+    
     bool f1;
     bool f2;
     bool f3;
@@ -40,6 +44,8 @@ typedef enum {
     bool f5;
     
     bool isError;
+    bool isInitiated;
+    
     
 }
 
@@ -48,6 +54,7 @@ typedef enum {
 
 @property(readwrite) int address;
 @property(readwrite) int speed;
+@property(readwrite) int bus;
 @property(readwrite) int max_speed;
 @property(readwrite)direction dir;
 @property(readwrite)bool f1;
@@ -56,6 +63,7 @@ typedef enum {
 @property(readwrite)bool f4;
 @property(readwrite)bool f5;
 @property(readwrite)bool isError;
+@property(readwrite)bool isInitiated;
 
 
 -(id)initWithAddress:(int)add ;

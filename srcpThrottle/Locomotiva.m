@@ -12,7 +12,7 @@
 
 @implementation Locomotiva
 
-@synthesize identifier,locoThumb,speed,max_speed,dir,address,f1,f2,f3,f4,f5,isError;
+@synthesize identifier,locoThumb,speed,max_speed,dir,address,f1,f2,f3,f4,f5,bus,isError,isInitiated;
 
 -(id) init
 {
@@ -25,6 +25,7 @@
     
     dir=kForward;
     
+    bus=SRCP_LOCO_BUS;
     
     f1=false;
     f2=false;
@@ -33,6 +34,8 @@
     f5=false;
     
     isError=false;
+    isInitiated=false;
+    
     
     return self;
     

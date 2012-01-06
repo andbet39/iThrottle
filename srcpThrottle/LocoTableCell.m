@@ -47,7 +47,8 @@
     UIImage *minImage = [UIImage imageNamed:@"pixel.png"];
 	UIImage *maxImage = [UIImage imageNamed:@"pixel.png"];
     
-    
+    [speedSlider setMaximumValue:locom.max_speed];
+    [speedSlider setMinimumValue:locom.max_speed*(-1) ];
     
 	minImage=[minImage stretchableImageWithLeftCapWidth:100.0 topCapHeight:0.0];
 	maxImage=[maxImage stretchableImageWithLeftCapWidth:100.0 topCapHeight:0.0];
