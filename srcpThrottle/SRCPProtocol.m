@@ -91,7 +91,7 @@
             
             NSArray *myWords = [mess componentsSeparatedByString:@" "];
             
-            //Se è una LOCO - GL
+            //If a LOCO - GL
             if([[myWords objectAtIndex:4]isEqualToString:@"GL"]){
             
                 LocomotiveManager *lm = [LocomotiveManager sharedManager];

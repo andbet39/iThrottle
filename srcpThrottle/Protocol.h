@@ -15,7 +15,6 @@
 
     SocketManager * sckmgr;
     
-
 }
 
 @property(nonatomic,retain) SocketManager * sckmgr;

@@ -10,7 +10,7 @@
 
 
 #define SPEED_STEP 14
-#define  SRCP_LOCO_BUS 1
+#define  SRCP_LOCO_BUS 2
 
 typedef enum {
     kForward,
