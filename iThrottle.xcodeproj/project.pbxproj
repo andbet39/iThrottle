@@ -21,7 +21,6 @@
 		655FD433149CF36C00580563 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 655FD432149CF36C00580563 /* main.m */; };
 		655FD437149CF36C00580563 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 655FD436149CF36C00580563 /* AppDelegate.m */; };
 		655FD43A149CF36C00580563 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655FD438149CF36C00580563 /* MainStoryboard_iPhone.storyboard */; };
-		655FD43D149CF36C00580563 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655FD43B149CF36C00580563 /* MainStoryboard_iPad.storyboard */; };
 		655FD460149CF85800580563 /* SocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 655FD45F149CF85800580563 /* SocketManager.m */; };
 		6584093D149FB61B00527173 /* LocoTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6584093C149FB61B00527173 /* LocoTableCell.m */; };
 		65840941149FB6BB00527173 /* LocoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6584093F149FB6BB00527173 /* LocoListViewController.m */; };
@@ -87,7 +86,6 @@
 		655FD435149CF36C00580563 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		655FD436149CF36C00580563 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		655FD439149CF36C00580563 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		655FD43C149CF36C00580563 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		655FD447149CF36C00580563 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		655FD44F149CF36C00580563 /* iThrottleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iThrottleTests-Info.plist"; sourceTree = "<group>"; };
 		655FD451149CF36C00580563 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -224,7 +222,6 @@
 				651E21C214A2606800CA18EF /* images */,
 				6584093A149FB5FE00527173 /* TableCell */,
 				655FD438149CF36C00580563 /* MainStoryboard_iPhone.storyboard */,
-				655FD43B149CF36C00580563 /* MainStoryboard_iPad.storyboard */,
 				655FD42D149CF36C00580563 /* Supporting Files */,
 				655FD45E149CF85800580563 /* SocketManager.h */,
 				655FD45F149CF85800580563 /* SocketManager.m */,
@@ -402,7 +399,6 @@
 			files = (
 				655FD431149CF36C00580563 /* InfoPlist.strings in Resources */,
 				655FD43A149CF36C00580563 /* MainStoryboard_iPhone.storyboard in Resources */,
-				655FD43D149CF36C00580563 /* MainStoryboard_iPad.storyboard in Resources */,
 				651E21C514A2607E00CA18EF /* slider-images-handle.png in Resources */,
 				65B418C214AB2ABB0053E091 /* f1_green@2x.png in Resources */,
 				65B418C314AB2ABB0053E091 /* f1_red@2x.png in Resources */,
@@ -485,14 +481,6 @@
 			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		655FD43B149CF36C00580563 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				655FD43C149CF36C00580563 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		655FD450149CF36C00580563 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -531,16 +519,16 @@
 		654625C714AF67F500EA89CC /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Andrea Terzani";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Andrea Terzani";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "srcpThrottle/iThrottle-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "srcpThrottle/iThrottle-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = iThrottle;
-				PROVISIONING_PROFILE = "C22AEDBC-331B-4960-A041-42BF9D9467CA";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BD673352-2674-40F5-8174-EC1BF0352177";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
