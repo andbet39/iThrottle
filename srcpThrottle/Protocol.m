@@ -10,13 +10,14 @@
 
 @implementation Protocol
 
-@synthesize sckmgr;
+@synthesize sckmgr,isConnecting,isConnect;
 
 -(id)init
 {
 
     sckmgr = [[SocketManager alloc]init];
-    
+    isConnecting=false;
+    isConnect=FALSE;
     
     return self;
     

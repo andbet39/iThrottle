@@ -14,10 +14,14 @@
 {
 
     SocketManager * sckmgr;
+    Boolean isConnect;
+    Boolean isConnecting;
     
 }
 
 @property(nonatomic,retain) SocketManager * sckmgr;
+@property(readwrite)Boolean isConnecting;
+@property(readwrite)Boolean isConnect;
 
 
 -(void)Connect;

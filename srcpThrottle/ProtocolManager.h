@@ -15,7 +15,7 @@
     Protocol * protocol;
     
     Boolean isBidirection;
-
+    
 }
 @property(nonatomic,retain)Protocol * protocol;
 @property(readwrite)Boolean isBidirection;

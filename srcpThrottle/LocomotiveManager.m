@@ -49,13 +49,6 @@ static LocomotiveManager *sharedLocomotiveManager = nil;
        
        }else{
        
-         /*  Locomotiva * lct =[[Locomotiva alloc] initWithAllParam:19 Identifier:@"Prova1" MaxSpeed:14];
-           [locomotivesArray setValue:lct forKey:[NSString stringWithFormat:@"%d",lct.address]];
-           
-           
-           Locomotiva * lct2 =[[Locomotiva alloc] initWithAllParam:12 Identifier:@"Prova12" MaxSpeed:14];
-           [locomotivesArray setValue:lct2 forKey:[NSString stringWithFormat:@"%d",lct2.address]];
-      */
           }
         
     

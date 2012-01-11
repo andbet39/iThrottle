@@ -13,18 +13,20 @@
 #import "SRCPProtocol.h"
 #import "ProtocolManager.h"
 
-@interface ConfigViewController : UITableViewController
+@interface ConfigViewController : UITableViewController <UIAlertViewDelegate>
 {
 
     LocomotiveManager * lm;
     ProtocolManager  * sharedProtocol;
     
-
+    NSTimer *connecTimer;
+    float connectingTime;
 
 
 }
 @property (weak, nonatomic) IBOutlet UITextField *PortText;
 @property (weak, nonatomic) IBOutlet UITextField *serverText;
+@property (weak, nonatomic) IBOutlet UIButton *ConnectButton;
 
 
 

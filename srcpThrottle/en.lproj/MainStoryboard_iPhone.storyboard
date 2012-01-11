@@ -30,7 +30,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
-                                                        <action selector="doneButtonOnKeyboardPressed:" destination="PoB-Ut-KYK" eventType="editingDidEnd" id="cbk-hO-O4K"/>
+                                                        <action selector="doneButtonOnKeyboardPressed:" destination="PoB-Ut-KYK" eventType="editingDidEndOnExit" id="PxT-uC-4tT"/>
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Server IP" lineBreakMode="tailTruncation" minimumFontSize="10" id="105-1h-gw6">
@@ -116,7 +116,7 @@
                                                     <rect key="frame" x="20" y="15" width="260" height="37"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <state key="normal" title="Save Loco list" backgroundImage="emergency@2x.png">
+                                                    <state key="normal" title="Save Settings" backgroundImage="emergency@2x.png">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -142,6 +142,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Config" image="config.png" id="A1Y-jY-KY2"/>
                     <connections>
+                        <outlet property="ConnectButton" destination="EOb-wi-hIB" id="xTv-W7-NqN"/>
                         <outlet property="PortText" destination="sqZ-T7-4Me" id="j4a-98-thh"/>
                         <outlet property="serverText" destination="2KL-9p-uT9" id="JF0-Bg-84Q"/>
                     </connections>
@@ -716,78 +717,6 @@
         <image name="taker.png" width="188" height="22"/>
         <image name="twitter.png" width="50" height="50"/>
     </resources>
-    <classes>
-        <class className="ConfigViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ConfigViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="Connect:"/>
-                <relationship kind="action" name="Save:"/>
-                <relationship kind="outlet" name="PortText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="Save" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="serverText" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="LocoControllerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocoControllerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="F1ButtonPress:"/>
-                <relationship kind="action" name="F2ButtonPress:"/>
-                <relationship kind="action" name="F3ButtonPress:"/>
-                <relationship kind="action" name="F4ButtonPress:"/>
-                <relationship kind="action" name="FnButtonPress:"/>
-                <relationship kind="action" name="StopAction:"/>
-                <relationship kind="action" name="dirButtonPress:"/>
-                <relationship kind="action" name="sliderSpeedChanged:"/>
-                <relationship kind="action" name="stopButtonPress:"/>
-                <relationship kind="outlet" name="AddressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="F1Button" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="F2Button" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="F3Button" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="F4Button" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="FnButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="dirButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="navBar" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="speedLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="speedSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="staticAddressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="staticSpeedLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LocoListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocoListViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="DetailPressed:"/>
-                <relationship kind="action" name="editPress:"/>
-                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="LocoTableCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocoTableCell.h"/>
-            <relationships>
-                <relationship kind="action" name="SpeedChanged:"/>
-                <relationship kind="action" name="StopPress:"/>
-                <relationship kind="outlet" name="addressLabelCell" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="identifierLabelCell" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="locoThumb" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="speedLabelCell" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="speedSlider" candidateClass="UISlider"/>
-            </relationships>
-        </class>
-        <class className="LocomotiveNewViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocomotiveNewViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="AddressDone:"/>
-                <relationship kind="action" name="ImageClick:"/>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="done:"/>
-                <relationship kind="action" name="doneButtonOnKeyboardPressed:"/>
-                <relationship kind="outlet" name="AddressText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="idText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="stepText" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
