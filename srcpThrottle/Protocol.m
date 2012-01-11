@@ -16,6 +16,8 @@
 {
 
     sckmgr = [[SocketManager alloc]init];
+    
+    //Version 1.1
     isConnecting=false;
     isConnect=FALSE;
     
